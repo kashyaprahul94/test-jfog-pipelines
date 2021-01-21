@@ -10,7 +10,7 @@ resources:
         pullRequestClose: true
         
 pipelines:
-  - name: test_env_vars
+  - name: test_env_vars_gh
     steps:
       - name: first_step
         type: Bash
