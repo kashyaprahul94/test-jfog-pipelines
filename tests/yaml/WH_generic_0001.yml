@@ -1,0 +1,27 @@
+resources:
+  - name: github_kashyaprahul94_repo
+    type: GitRepo
+    configuration:
+      path: kashyaprahul94/test-jfrog-pipelines
+      gitProvider: github_kashyaprahul94
+      buildOn:
+        commit: false
+        pullRequestCreate: true
+
+pipelines:
+  - name: WH_generic_0001
+    steps:
+      - name: WH_generic_0001_001
+        type: Bash
+        configuration:
+          inputResources:
+            - name: github_kashyaprahul94_repo
+              trigger: true
+        execution:
+          onExecute:
+            - printenv
+            - base_branch=$(find_resource_variable "github_kashyaprahul94_repo" "baseCommitRef")
+            - head_branch=$(find_resource_variable "github_kashyaprahul94_repo" "headCommitRef")
+            - echo "base_branch - ${base_branch}"
+            - echo "head_branch - ${head_branch}"
+            - if [ "$head_branch" != "WH_generic_0001" ]; then exit 1; fi
