@@ -20,4 +20,8 @@ pipelines:
               trigger: true
         execution:
           onExecute:
-          	- printenv
+            - base_branch=$(find_resource_variable "github_kashyaprahul94_repo" "baseCommitRef")
+            - head_branch=$(find_resource_variable "github_kashyaprahul94_repo" "headCommitRef")
+            - echo "base_branch - ${base_branch}"
+            - echo "head_branch - ${head_branch}"
+            - if [ "$head_branch" == "pr_env_var" ]; then exit 1; fi
