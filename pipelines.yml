@@ -5,9 +5,9 @@ resources:
       path: kashyaprahul94/test-jfrog-pipelines
       gitProvider: github_kashyaprahul94
       buildOn:
-        commit: true
+        commit: false
         pullRequestCreate: true
-        pullRequestClose: true
+        pullRequestClose: false
         
 pipelines:
   - name: test_env_vars_gh
