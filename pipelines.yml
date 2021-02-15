@@ -4,6 +4,8 @@ resources:
     configuration:
       path: kashyaprahul94/test-jfrog-pipelines
       gitProvider: github_kashyaprahul94
+      branches:
+        include: ^{{gitBranch}}$
         
 pipelines:
   - name: FooPipeline
