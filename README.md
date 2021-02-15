@@ -7,4 +7,3 @@ JFrog Pipelines test
 * Test
 * Another test
 * 
-*
