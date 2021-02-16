@@ -7,4 +7,4 @@ JFrog Pipelines test
 * Test
 * Another test
 * 
-* klasjlasljdlasjdlkasjdlasjdljaslkdjlkadjlkasjdlkasjdlkasjldkjaskxx
+* klasjlasljdlasjdlkasjdlasjdljaslkdjlkadjlkasjdlkasjdlkasjldkjask
