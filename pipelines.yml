@@ -6,6 +6,9 @@ resources:
       gitProvider: github_kashyaprahul94
       branches:
         include: ^{{gitBranch}}$
+      files:
+        include: pipelines\.yml
+        exclude: ^ignore
         
 pipelines:
   - name: FooPipeline
