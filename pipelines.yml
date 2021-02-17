@@ -1,5 +1,5 @@
 resources:
-  - name: fooGit
+  - name: github_kashyaprahul94_repo
     type: GitRepo
     configuration:
       path: kashyaprahul94/test-jfrog-pipelines
@@ -11,13 +11,13 @@ resources:
         exclude: prod.env
         
 pipelines:
-  - name: FooPipeline
+  - name: FooPipeline_gh
     steps:
-      - name: FooPipelineStep
+      - name: FooPipeline_gh_step
         type: Bash
         configuration:
           inputResources:
-            - name: fooGit
-        execution: 
+            - name: github_kashyaprahul94_repo
+        execution:
           onExecute:
-            - printenv
+          	- printenv
