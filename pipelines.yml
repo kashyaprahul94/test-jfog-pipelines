@@ -7,7 +7,7 @@ resources:
       branches:
         include: ^{{gitBranch}}$
       files:
-        include: (.*\.(env|yml|md))$
+        include: (.*.(env|yml|md))$
         exclude: prod.env
         
 pipelines:
